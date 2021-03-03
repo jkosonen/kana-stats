@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>KanaStats auth</title>
+    <script type="text/javascript">
+      var segmentCount = 0;
+      var l = window.location;
+      if (l.toString().indexOf("https://kanastats.com/auth") === 0) {
+        const u = l.toString();
+        localStorage.setItem("login", u);
+        l.replace(
+          l.protocol +
+            "//" +
+            l.hostname +
+            (l.port ? ":" + l.port : "") +
+            l.pathname
+              .split("/")
+              .slice(0, 1 + segmentCount)
+              .join("/")
+        );
+      }
+    </script>
+  </head>
+  <body>
+    Auth
+  </body>
+</html>

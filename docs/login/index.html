@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>KanaStats login</title>
+    <script type="text/javascript">
+      var segmentCount = 0;
+      var l = window.location;
+      if (l.toString().indexOf("https://kanastats.com/login") === 0) {
+        l.replace(
+          "https://9bf9pjts06.execute-api.eu-west-1.amazonaws.com/dev/login"
+        );
+      }
+    </script>
+    <style>
+      body {
+        background: #1e2430;
+        color: white;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    Redirecting to Steam, please wait!
+  </body>
+</html>
